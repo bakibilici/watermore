@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">tektek</string>
+    <string-array name="kgs">
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+    </string-array>
+    <string-array name="dailies">
+        <item>"Günlük" "Aktifliğiniz."</item>
+        <item>Hareket etmiyorum, egzersiz yapmıyorum.</item>
+        <item>Çok az hareket ediyorum.</item>
+        <item>Günüm hareketli geçiyor. Hareket ediyorum.</item>
+        <item>Bolca hareket ediyor , egzersiz yapıyorum.</item>
+        <item>Spor yapıyorum , aşırı hareket ediyorum.</item>
+
+    </string-array>
+    <string-array name="weatheries">
+        <item>Yaşadığınız ortamın genel sıcaklığı.</item>
+        <item>Çok sıcak.</item>
+        <item>Normal fakat biraz sıcak.</item>
+        <item>Normal.</item>
+        <item>Normal fakat biraz serin.</item>
+        <item>Çok soğuk.</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
