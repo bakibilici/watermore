@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgg"
+    tools:context=".mainPage">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/damla"
+        android:layout_width="107dp"
+        android:layout_height="147dp"
+        android:background="@drawable/gif30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <TextView
+        android:id="@+id/damlayuzde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoesemibold"
+        android:text="%35"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/damla"
+        app:layout_constraintEnd_toEndOf="@id/damla"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="@id/damla"
+        app:layout_constraintTop_toTopOf="@id/damla"
+        app:layout_constraintVertical_bias="0.607" />
+
+    <ImageView
+        android:id="@+id/weatherbutton"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:background="@drawable/weaterbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoesemibold"
+        android:text="Last Pussy Slayer"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/weatherbutton"
+        app:layout_constraintEnd_toEndOf="@+id/weatherbutton"
+        app:layout_constraintStart_toStartOf="@+id/weatherbutton"
+        app:layout_constraintTop_toTopOf="@+id/weatherbutton"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoesemibold"
+        android:text="Hoşgeldin!"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/weatherbutton"
+        app:layout_constraintEnd_toEndOf="@+id/weatherbutton"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/weatherbutton"
+        app:layout_constraintTop_toTopOf="@+id/weatherbutton"
+        app:layout_constraintVertical_bias="0.161" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/man"
+        app:layout_constraintBottom_toBottomOf="@+id/weatherbutton"
+        app:layout_constraintEnd_toEndOf="@+id/weatherbutton"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/weatherbutton"
+        app:layout_constraintTop_toTopOf="@+id/weatherbutton"
+        app:layout_constraintVertical_bias="0.700
+" />
+
+    <ImageView
+        android:id="@+id/addwater"
+        android:layout_width="220dp"
+        android:layout_height="125dp"
+        android:background="@drawable/addwaterbigbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303" />
+
+    <Button
+        android:id="@+id/addwaterbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/addwaterbutton"
+        android:fontFamily="@font/segoesemibold"
+        android:paddingBottom="15dp"
+        android:text="Ekle"
+        android:textAlignment="gravity"
+        android:textAllCaps="false"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="15dp"
+        app:backgroundTint="@color/whitey"
+        app:layout_constraintBottom_toBottomOf="@+id/addwater"
+        app:layout_constraintEnd_toEndOf="@+id/addwater"
+        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintStart_toStartOf="@+id/addwater"
+        app:layout_constraintTop_toTopOf="@+id/addwater"
+        app:layout_constraintVertical_bias="0.872" />
+
+    <ImageView
+        android:id="@+id/damlacık"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drop"
+        app:layout_constraintBottom_toBottomOf="@+id/addwater"
+        app:layout_constraintEnd_toEndOf="@+id/addwater"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="@+id/addwater"
+        app:layout_constraintTop_toTopOf="@+id/addwater"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/plus"
+        app:layout_constraintBottom_toBottomOf="@+id/damlacık"
+        app:layout_constraintEnd_toEndOf="@+id/damlacık"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/damlacık"
+        app:layout_constraintTop_toTopOf="@+id/damlacık"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoesemibold"
+        android:text="Su Ekle"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addwater"
+        app:layout_constraintEnd_toEndOf="@+id/addwater"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="@+id/addwater"
+        app:layout_constraintTop_toTopOf="@+id/addwater"
+        app:layout_constraintVertical_bias="0.204" />
+
+    <ImageView
+        android:id="@+id/reminderbig"
+        android:layout_width="220dp"
+        android:layout_height="125dp"
+        android:background="@drawable/reminderbuttonbig"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoesemibold"
+        android:text="Hatırlatıcı Ekle"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/reminderbig"
+        app:layout_constraintEnd_toEndOf="@+id/reminderbig"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toStartOf="@+id/reminderbig"
+        app:layout_constraintTop_toTopOf="@+id/reminderbig"
+        app:layout_constraintVertical_bias="0.202" />
+
+    <Button
+        android:id="@+id/reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/remindersetbutton"
+        android:fontFamily="@font/segoesemibold"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp"
+        android:text="Ekle"
+        android:textAllCaps="false"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="15dp"
+        app:backgroundTint="@color/whitey"
+        app:layout_constraintBottom_toBottomOf="@+id/reminderbig"
+        app:layout_constraintEnd_toEndOf="@+id/reminderbig"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="@+id/reminderbig"
+        app:layout_constraintTop_toTopOf="@+id/reminderbig"
+        app:layout_constraintVertical_bias="0.818" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reminders"
+        app:layout_constraintBottom_toBottomOf="@+id/reminderbig"
+        app:layout_constraintEnd_toEndOf="@+id/reminderbig"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="@+id/reminderbig"
+        app:layout_constraintTop_toTopOf="@+id/reminderbig"
+        app:layout_constraintVertical_bias="0.322" />
+
+    <ImageView
+        android:id="@+id/goalrec"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:background="@drawable/goalrec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hedefs"
+        app:layout_constraintBottom_toBottomOf="@+id/goalrec"
+        app:layout_constraintEnd_toEndOf="@+id/goalrec"
+        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintStart_toStartOf="@+id/goalrec"
+        app:layout_constraintTop_toTopOf="@+id/goalrec"
+        app:layout_constraintVertical_bias="0.282" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoesemibold"
+        android:text="Hedef"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/goalrec"
+        app:layout_constraintEnd_toEndOf="@+id/goalrec"
+        app:layout_constraintHorizontal_bias="0.302"
+        app:layout_constraintStart_toStartOf="@+id/goalrec"
+        app:layout_constraintTop_toTopOf="@+id/goalrec"
+        app:layout_constraintVertical_bias="0.24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoesemibold"
+        android:text="GOAL"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/goalrec"
+        app:layout_constraintEnd_toEndOf="@+id/goalrec"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/goalrec"
+        app:layout_constraintTop_toTopOf="@+id/goalrec"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <ImageView
+        android:id="@+id/bmirec"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bmirec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="@drawable/scales"
+        app:layout_constraintBottom_toBottomOf="@+id/bmirec"
+        app:layout_constraintEnd_toEndOf="@+id/bmirec"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="@+id/bmirec"
+        app:layout_constraintTop_toTopOf="@+id/bmirec"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <TextView
+        android:layout_width="62dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/segoesemibold"
+        android:text="Vücut Kitle İndeksi"
+        android:textAllCaps="false"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmirec"
+        app:layout_constraintEnd_toEndOf="@+id/bmirec"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintStart_toStartOf="@+id/bmirec"
+        app:layout_constraintTop_toTopOf="@+id/bmirec"
+        app:layout_constraintVertical_bias="0.235" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:fontFamily="@font/segoesemibold"
+        android:text="31.75 vki"
+        android:textAllCaps="false"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmirec"
+        app:layout_constraintEnd_toEndOf="@+id/bmirec"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/bmirec"
+        app:layout_constraintTop_toTopOf="@+id/bmirec"
+        app:layout_constraintVertical_bias="0.737" />
+
+    <ImageView
+        android:id="@+id/histories"
+        android:layout_width="220dp"
+        android:layout_height="125dp"
+        android:background="@drawable/historybig"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/healthstats"
+        app:layout_constraintBottom_toBottomOf="@+id/histories"
+        app:layout_constraintEnd_toEndOf="@+id/histories"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="@+id/histories"
+        app:layout_constraintTop_toTopOf="@+id/histories"
+        app:layout_constraintVertical_bias="0.322" />
+
+    <Button
+        android:id="@+id/degers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/showhistorybutton"
+        android:fontFamily="@font/segoesemibold"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp"
+            android:text="Göster"
+        android:textAllCaps="false"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="15dp"
+        app:backgroundTint="@color/whitey"
+        app:layout_constraintBottom_toBottomOf="@+id/histories"
+        app:layout_constraintEnd_toEndOf="@+id/histories"
+        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintStart_toStartOf="@+id/histories"
+        app:layout_constraintTop_toTopOf="@+id/histories"
+        app:layout_constraintVertical_bias="0.927" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoesemibold"
+        android:text="Sağlık Değerlerim"
+        android:textAllCaps="false"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/histories"
+        app:layout_constraintEnd_toEndOf="@+id/histories"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="@+id/histories"
+        app:layout_constraintTop_toTopOf="@+id/histories"
+        app:layout_constraintVertical_bias="0.252" />
+
+    <ImageView
+        android:id="@+id/updates"
+        android:layout_width="220dp"
+        android:layout_height="125dp"
+        android:background="@drawable/updatebig"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
+
+    <Button
+        android:id="@+id/updatevalues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/updatebutton"
+        android:fontFamily="@font/segoesemibold"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp"
+        android:text="Güncelle"
+        android:textAllCaps="false"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="14dp"
+        app:backgroundTint="@color/whitey"
+        app:layout_constraintBottom_toBottomOf="@+id/updates"
+        app:layout_constraintEnd_toEndOf="@+id/updates"
+        app:layout_constraintHorizontal_bias="0.319"
+        app:layout_constraintStart_toStartOf="@+id/updates"
+        app:layout_constraintTop_toTopOf="@+id/updates"
+        app:layout_constraintVertical_bias="0.89" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upperrr"
+        app:layout_constraintBottom_toBottomOf="@+id/updates"
+        app:layout_constraintEnd_toEndOf="@+id/updates"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="@+id/updates"
+        app:layout_constraintTop_toTopOf="@+id/updates"
+        app:layout_constraintVertical_bias="0.308" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoesemibold"
+        android:text="Verileri Güncelle"
+        android:textAllCaps="false"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/updates"
+        app:layout_constraintEnd_toEndOf="@+id/updates"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="@+id/updates"
+        app:layout_constraintTop_toTopOf="@+id/updates"
+        app:layout_constraintVertical_bias="0.22" />
+
+    <ImageView
+        android:id="@+id/statrec"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:background="@drawable/lilrecstat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoesemibold"
+        android:text="Grafikler"
+        android:textAllCaps="false"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/statrec"
+        app:layout_constraintEnd_toEndOf="@+id/statrec"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintStart_toStartOf="@+id/statrec"
+        app:layout_constraintTop_toTopOf="@+id/statrec"
+        app:layout_constraintVertical_bias="0.110" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/vaccination"
+        app:layout_constraintBottom_toBottomOf="@+id/statrec"
+        app:layout_constraintEnd_toEndOf="@+id/statrec"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/statrec"
+        app:layout_constraintTop_toTopOf="@+id/statrec"
+        app:layout_constraintVertical_bias="0.366" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="95dp"
+        android:layout_height="53dp"
+        android:background="@drawable/statshower"
+        android:fontFamily="@font/segoesemibold"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp"
+        android:text="Göster"
+        android:textAllCaps="false"
+        android:textColor="@color/mainscreentextcolor"
+        android:textSize="12sp"
+        app:backgroundTint="@color/whitey"
+        app:layout_constraintBottom_toBottomOf="@+id/statrec"
+        app:layout_constraintEnd_toEndOf="@+id/statrec"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/statrec"
+        app:layout_constraintTop_toTopOf="@+id/statrec"
+        app:layout_constraintVertical_bias="0.888" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
