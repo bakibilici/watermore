@@ -14,7 +14,8 @@
     <color name="red">#F10606</color>
     <color name="inv">#00F10606</color>
     <color name="mainscreentextcolor">#10088A</color>
-    <color name="popstart">#F2FFFFFF</color>
+    <color name="popstart">#DFFCFE</color>
     <color name="popend">#F205EDDA</color>
     <color name="noblack">#0F000000</color>
+    <color name="transparent">#00000000</color>
 </resources>

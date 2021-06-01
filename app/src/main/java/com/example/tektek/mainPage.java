@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 public class mainPage extends AppCompatActivity {
@@ -18,8 +20,12 @@ public class mainPage extends AppCompatActivity {
         Intent intent = new Intent(this, waterPop.class);
         startActivity(intent);
     }
-    public void getUsernameEnter(){
-        Intent intent = new Intent(this, usernamePop.class);
+    public void showHealthScreen(){
+        Intent intent = new Intent(this, healthdegerler.class);
+        startActivity(intent);
+    }
+    public void setReminderScreen(){
+        Intent intent = new Intent(this, reminderScreen.class);
         startActivity(intent);
     }
     @Override
@@ -29,7 +35,9 @@ public class mainPage extends AppCompatActivity {
         //yukardaki metodları çalıştıracak butonlara girdim.
         Button updater;
         Button waterAdder;
-        Button simdilik;
+        Button degerekran;
+        Button setReminder;
+
         waterAdder=findViewById(R.id.addwaterbutton);
         waterAdder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +45,7 @@ public class mainPage extends AppCompatActivity {
                 addWaterScreen();
             }
         });
+
         updater = findViewById(R.id.updatevalues);
         updater.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,11 +53,20 @@ public class mainPage extends AppCompatActivity {
                 goUpdateValues();
             }
         });
-        simdilik=findViewById(R.id.reminder);
-        simdilik.setOnClickListener(new View.OnClickListener() {
+
+        degerekran = findViewById(R.id.degers);
+        degerekran.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getUsernameEnter();
+                showHealthScreen();
+            }
+        });
+
+        setReminder = findViewById(R.id.reminder);
+        setReminder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setReminderScreen();
             }
         });
     }

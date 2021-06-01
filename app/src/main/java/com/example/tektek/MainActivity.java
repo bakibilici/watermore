@@ -114,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
                 if(position > 0) {
                     imageView3.setImageResource(R.drawable.rectangle2after);
                     burger1.setImageResource(R.drawable.burger2);
+                    Animation animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.fadein);
+                    imageView3.startAnimation(animation);
 
                 }
             }
@@ -129,6 +131,8 @@ public class MainActivity extends AppCompatActivity {
                 if(position > 0) {
                     boykare.setImageResource(R.drawable.boyafter);
                     boycu.setImageResource(R.drawable.height1);
+                    Animation animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.fadein);
+                    boykare.startAnimation(animation);
 
                 }
             }
@@ -144,6 +148,8 @@ public class MainActivity extends AppCompatActivity {
                 if(position > 0) {
                     yaskare.setImageResource(R.drawable.ageafter);
                     yasci.setImageResource(R.drawable.calendar1);
+                    Animation animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.fadein);
+                    yaskare.startAnimation(animation);
 
                 }
             }

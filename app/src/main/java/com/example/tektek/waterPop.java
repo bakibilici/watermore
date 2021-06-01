@@ -3,16 +3,26 @@ package com.example.tektek;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class waterPop extends Activity {
+    int addwater;
+    ImageView tea,tearec,teaolcu,glass,glassrec,glassolcu,cup,cuprec,cupolcu,pcup,pcuprec,pcupolcu,
+            bottle,bottlerec,bottleolcu,surahi,surahirec,surahiolcu,musluk,muslukrec,binustu,verigir;
+    TextView binustuyazi,binustuml;
+    EditText binustuveri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,85 +40,164 @@ public class waterPop extends Activity {
         params.y=-20;
         //her içilen mL için 3 eleman var onları danımladım
         getWindow().setAttributes(params);
-        ImageView tea = findViewById(R.id.tea);
-        ImageView tearec = findViewById(R.id.tearec);
-        ImageView teaolcu = findViewById(R.id.teaolcu);
-        ImageView glass = findViewById(R.id.glass);
-        ImageView glassrec = findViewById(R.id.glassrec);
-        ImageView glassolcu = findViewById(R.id.glassolcu);
-        ImageView cup = findViewById(R.id.cupimage);
-        ImageView cuprec = findViewById(R.id.cuprec);
-        ImageView cupolcu = findViewById(R.id.cupolcu);
-        ImageView pcup = findViewById(R.id.karton);
-        ImageView pcuprec = findViewById(R.id.kartonrec);
-        ImageView pcupolcu = findViewById(R.id.papercupolcu);
-        ImageView bottle = findViewById(R.id.sise);
-        ImageView bottlerec = findViewById(R.id.siserec);
-        ImageView bottleolcu = findViewById(R.id.bottleolcu);
-        ImageView surahi = findViewById(R.id.surahi);
-        ImageView surahirec = findViewById(R.id.surahirec);
-        ImageView surahiolcu =findViewById(R.id.surahiolcu);
-        ImageView musluk = findViewById(R.id.musluk);
-        ImageView muslukrec = findViewById(R.id.muslukrec);
-        ImageView binustu = findViewById(R.id.binustu);
-        ImageView verigir = findViewById(R.id.binustugir);
+        tea = findViewById(R.id.tea);
+        tearec = findViewById(R.id.tearec);
+        teaolcu = findViewById(R.id.teaolcu);
+        glass = findViewById(R.id.glass);
+        glassrec = findViewById(R.id.glassrec);
+        glassolcu = findViewById(R.id.glassolcu);
+        cup = findViewById(R.id.cupimage);
+        cuprec = findViewById(R.id.cuprec);
+        cupolcu = findViewById(R.id.cupolcu);
+        pcup = findViewById(R.id.karton);
+        pcuprec = findViewById(R.id.kartonrec);
+        pcupolcu = findViewById(R.id.papercupolcu);
+        bottle = findViewById(R.id.sise);
+        bottlerec = findViewById(R.id.siserec);
+        bottleolcu = findViewById(R.id.bottleolcu);
+        surahi = findViewById(R.id.surahi);
+        surahirec = findViewById(R.id.surahirec);
+        surahiolcu =findViewById(R.id.surahiolcu);
+        musluk = findViewById(R.id.musluk);
+        muslukrec = findViewById(R.id.muslukrec);
+        binustu = findViewById(R.id.binustu);
+        verigir = findViewById(R.id.binustugir);
+        binustuyazi = findViewById(R.id.binustuyazi);
+        binustuveri = findViewById(R.id.binustuedit);
+        binustuml = findViewById(R.id.binustuml);
         verigir.setVisibility(View.INVISIBLE);
-        //onclicklerle resimler güzelleşiyo felan yane
-        tearec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tearec.setImageResource(R.drawable.addwaterselectedblue);
-                tea.setImageResource(R.drawable.teaafter);
-                teaolcu.setImageResource(R.drawable.teaolcuafter);
-            }
-        });
-        glassrec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                glass.setImageResource(R.drawable.glassafter);
-                glassrec.setImageResource(R.drawable.addwaterselectedred);
-                glassolcu.setImageResource(R.drawable.glassolcuafter);
-            }
-        });
-        cuprec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cup.setImageResource(R.drawable.cupafter);
-                cuprec.setImageResource(R.drawable.addwaterselectedblue);
-                cupolcu.setImageResource(R.drawable.cupolcuafter);
-            }
-        });
-        pcuprec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pcup.setImageResource(R.drawable.papercupafter);
-                pcuprec.setImageResource(R.drawable.addwaterselectedred);
-                pcupolcu.setImageResource(R.drawable.paperolcuafter);
-            }
-        });
-        bottlerec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottle.setImageResource(R.drawable.bottleafter);
-                bottlerec.setImageResource(R.drawable.addwaterselectedblue);
-                bottleolcu.setImageResource(R.drawable.bottleolcuafter);
-            }
-        });
-        surahirec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                surahi.setImageResource(R.drawable.surahiafter);
-                surahirec.setImageResource(R.drawable.addwaterselectedred);
-                surahiolcu.setImageResource(R.drawable.surahiolcuafter);
-            }
-        });
-        musluk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                musluk.setImageResource(R.drawable.muslukafter);
-                muslukrec.setImageResource(R.drawable.addwaterselectedblue);
-                binustu.setImageResource(R.drawable.binustuafter);
-            }
-        });
+        binustuml.setVisibility(View.INVISIBLE);
+        binustuveri.setVisibility(View.INVISIBLE);
+        binustuyazi.setVisibility(View.INVISIBLE);
+
     }
+
+    public void binustuvisib(){
+        verigir.setVisibility(View.INVISIBLE);
+        binustuml.setVisibility(View.INVISIBLE);
+        binustuveri.setVisibility(View.INVISIBLE);
+        binustuyazi.setVisibility(View.INVISIBLE);
+    }
+    public void setFirstver(){
+        tea.setImageResource(R.drawable.tea);
+        teaolcu.setImageResource(R.drawable.teaolcu);
+        tearec.setImageResource(R.color.transparent);
+        glass.setImageResource(R.drawable.waterglass);
+        glassolcu.setImageResource(R.drawable.bardakolcu);
+        glassrec.setImageResource(R.color.transparent);
+        cup.setImageResource(R.drawable.cup);
+        cupolcu.setImageResource(R.drawable.cupolcu);
+        cuprec.setImageResource(R.color.transparent);
+        pcup.setImageResource(R.drawable.papercup);
+        pcupolcu.setImageResource(R.drawable.kartonolcu);
+        pcuprec.setImageResource(R.color.transparent);
+        bottle.setImageResource(R.drawable.bottle);
+        bottleolcu.setImageResource(R.drawable.bottleolcu);
+        bottlerec.setImageResource(R.color.transparent);
+        surahi.setImageResource(R.drawable.surahi);
+        surahiolcu.setImageResource(R.drawable.surahiolcu);
+        surahirec.setImageResource(R.color.transparent);
+        musluk.setImageResource(R.drawable.musluk);
+        binustu.setImageResource(R.drawable.binustu);
+        muslukrec.setImageResource(R.color.transparent);
+    }
+
+    public void OnClick(View v){
+        switch (v.getId()){
+            case R.id.tearec :
+                setFirstver();
+                addwater=100;
+                Animation fade = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                tea.setImageResource(R.drawable.teaafter);
+                tea.startAnimation(fade);
+                teaolcu.setImageResource(R.drawable.teaolcuafter);
+                teaolcu.startAnimation(fade);
+                tearec.setImageResource(R.drawable.addwaterselectedblue);
+                tearec.startAnimation(fade);
+
+                binustuvisib();
+                break;
+
+            case R.id.glassrec:
+                setFirstver();
+                addwater=200;
+                Animation fade2 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                glass.setImageResource(R.drawable.glassafter);
+                glass.startAnimation(fade2);
+                glassolcu.setImageResource(R.drawable.glassolcuafter);
+                glassolcu.startAnimation(fade2);
+                glassrec.setImageResource(R.drawable.addwaterselectedred);
+                glassrec.startAnimation(fade2);
+                binustuvisib();
+                break;
+
+            case R.id.cuprec :
+                setFirstver();
+                addwater=300;
+                Animation fade3 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                cup.setImageResource(R.drawable.cupafter);
+                cup.startAnimation(fade3);
+                cupolcu.setImageResource(R.drawable.cupolcuafter);
+                cupolcu.startAnimation(fade3);
+                cuprec.setImageResource(R.drawable.addwaterselectedblue);
+                cuprec.startAnimation(fade3);
+                binustuvisib();
+                break;
+
+            case R.id.kartonrec :
+                setFirstver();
+                addwater=400;
+                Animation fade4 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                pcup.setImageResource(R.drawable.papercupafter);
+                pcup.startAnimation(fade4);
+                pcupolcu.setImageResource(R.drawable.paperolcuafter);
+                pcupolcu.startAnimation(fade4);
+                pcuprec.setImageResource(R.drawable.addwaterselectedred);
+                pcuprec.startAnimation(fade4);
+                binustuvisib();
+                break;
+
+            case R.id.siserec :
+                setFirstver();
+                addwater=500;
+                Animation fade5 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                bottle.setImageResource(R.drawable.bottleafter);
+                bottle.startAnimation(fade5);
+                bottleolcu.setImageResource(R.drawable.bottleolcuafter);
+                bottleolcu.startAnimation(fade5);
+                bottlerec.setImageResource(R.drawable.addwaterselectedblue);
+                bottlerec.startAnimation(fade5);
+                binustuvisib();
+                break;
+
+            case R.id.surahirec :
+                setFirstver();
+                addwater=1000;
+                Animation fade6 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                surahi.setImageResource(R.drawable.surahiafter);
+                surahi.startAnimation(fade6);
+                surahiolcu.setImageResource(R.drawable.surahiolcuafter);
+                surahiolcu.startAnimation(fade6);
+                surahirec.setImageResource(R.drawable.addwaterselectedred);
+                surahirec.startAnimation(fade6);
+                binustuvisib();
+                break;
+
+            case R.id.muslukrec :
+                setFirstver();
+                Animation fade7 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                musluk.setImageResource(R.drawable.muslukafter);
+                musluk.startAnimation(fade7);
+                binustu.setImageResource(R.drawable.binustuafter);
+                binustu.startAnimation(fade7);
+                muslukrec.setImageResource(R.drawable.addwaterselectedblue);
+                muslukrec.startAnimation(fade7);
+                verigir.setVisibility(View.VISIBLE);
+                binustuml.setVisibility(View.VISIBLE);
+                binustuveri.setVisibility(View.VISIBLE);
+                binustuyazi.setVisibility(View.VISIBLE);
+                break;
+        }
+    }
+
 }

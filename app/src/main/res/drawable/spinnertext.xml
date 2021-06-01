@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="left"
-        android:textColor="#FF0000"
-        android:padding="5dip"
-        />
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/white" />
+                    <corners android:radius="17dp"/>
+                    <padding android:right="20dp"/>
+                </shape>
+            </item>
+
+
+        </layer-list>
+    </item>
 </selector>

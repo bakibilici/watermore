@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tektek">
 
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tektek">
-        <activity android:name=".usernamesPop"></activity>
+        <activity android:name=".reminderScreen"></activity>
+        <activity android:name=".healthdegerler" />
         <activity
-            android:name=".waterPop"
+            android:name=".usernamesPop"
             android:theme="@style/PopMe" />
         <activity
-            android:name=".usernamePop"
+            android:name=".waterPop"
             android:theme="@style/PopMe" />
         <activity android:name=".mainPage" />
         <activity android:name=".MainActivity">
