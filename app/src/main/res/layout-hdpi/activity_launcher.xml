@@ -5,9 +5,7 @@
     android:id="@+id/middlescreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-
+    tools:context=".LauncherActivity">
 
     <View
         android:id="@+id/__bg__iphone_x__xs__11_pro___11"
@@ -143,7 +141,6 @@
         android:layout_width="92dp"
         android:layout_height="39dp"
         android:background="@drawable/spinnerstyle"
-        android:popupBackground="@drawable/spinnertext"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="0.492"
@@ -157,7 +154,6 @@
         android:layout_width="92dp"
         android:layout_height="39dp"
         android:background="@drawable/spinnerstyle3"
-        android:popupBackground="@drawable/spinnertext"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.523"
@@ -169,7 +165,6 @@
         android:id="@+id/spinnercm"
         android:layout_width="92dp"
         android:layout_height="39dp"
-        android:popupBackground="@drawable/spinnertext"
         android:background="@drawable/spinnerstyle2"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
@@ -203,7 +198,6 @@
         android:layout_width="314dp"
         android:layout_height="30dp"
         android:background="@drawable/spinnerstyle4"
-        android:popupBackground="@drawable/spinnertext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -216,7 +210,6 @@
         android:layout_width="314dp"
         android:layout_height="30dp"
         android:background="@drawable/spinnerstyle4"
-        android:popupBackground="@drawable/spinnertext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -225,8 +218,8 @@
         app:layout_constraintVertical_bias="0.74" />
 
 
-
     <RadioGroup
+        android:id="@+id/radiogroup"
         android:layout_width="208dp"
         android:layout_height="123dp"
         android:orientation="vertical"
@@ -238,30 +231,32 @@
         app:layout_constraintVertical_bias="0.533">
 
         <RadioButton
+            android:id="@+id/radio_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/radioselector"
             android:button="@android:color/transparent"
             android:elevation="4dp"
+            android:fontFamily="@font/segoesemibold"
+            android:onClick="onRadioButtonClicked"
             android:paddingLeft="25dp"
             android:paddingBottom="10dp"
             android:text="Erkek"
-            android:fontFamily="@font/segoesemibold"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
 
         <RadioButton
+            android:id="@+id/radio_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/radioselector"
             android:button="@android:color/transparent"
             android:elevation="4dp"
+            android:fontFamily="@font/segoesemibold"
+            android:onClick="onRadioButtonClicked"
             android:paddingLeft="25dp"
             android:paddingBottom="10dp"
             android:text="Kadın"
-            android:fontFamily="@font/segoesemibold"
             android:textColor="@color/white" />
-
-
 
 
     </RadioGroup>

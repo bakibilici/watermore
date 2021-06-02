@@ -3,20 +3,17 @@ package com.example.tektek;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class reminderScreen extends AppCompatActivity {
+public class ReminderScreen extends AppCompatActivity {
 
     public void returnMainPage(){
-        Intent intent = new Intent(this, mainPage.class);
+        Intent intent = new Intent(this, MainPage.class);
         startActivity(intent);
     }
     ImageView geritusu,sabah,ogle,ikindi,gunbatimi,aksam,gece;
@@ -46,7 +43,7 @@ public class reminderScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sabah.setImageResource(R.drawable.sabahafter);
-                Animation animation1 = AnimationUtils.loadAnimation(reminderScreen.this,R.anim.fadein);
+                Animation animation1 = AnimationUtils.loadAnimation(ReminderScreen.this,R.anim.fadein);
                 sabah.startAnimation(animation1);
             }
         });
@@ -56,7 +53,7 @@ public class reminderScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ogle.setImageResource(R.drawable.ogleafter);
-                Animation animation1 = AnimationUtils.loadAnimation(reminderScreen.this,R.anim.fadein);
+                Animation animation1 = AnimationUtils.loadAnimation(ReminderScreen.this,R.anim.fadein);
                 ogle.startAnimation(animation1);
             }
         });
@@ -68,7 +65,7 @@ public class reminderScreen extends AppCompatActivity {
                 
                 Toast.makeText(getApplicationContext(),v.getBackground().toString(),Toast.LENGTH_LONG).show();
                 ikindi.setImageResource(R.drawable.ikindiafter);
-                Animation animation1 = AnimationUtils.loadAnimation(reminderScreen.this,R.anim.fadein);
+                Animation animation1 = AnimationUtils.loadAnimation(ReminderScreen.this,R.anim.fadein);
                 ikindi.startAnimation(animation1);
                 }
         });
@@ -78,7 +75,7 @@ public class reminderScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gunbatimi.setImageResource(R.drawable.duskafter);
-                Animation animation1 = AnimationUtils.loadAnimation(reminderScreen.this,R.anim.fadein);
+                Animation animation1 = AnimationUtils.loadAnimation(ReminderScreen.this,R.anim.fadein);
                 gunbatimi.startAnimation(animation1);
             }
         });
@@ -88,7 +85,7 @@ public class reminderScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 aksam.setImageResource(R.drawable.aksamafter);
-                Animation animation1 = AnimationUtils.loadAnimation(reminderScreen.this,R.anim.fadein);
+                Animation animation1 = AnimationUtils.loadAnimation(ReminderScreen.this,R.anim.fadein);
                 aksam.startAnimation(animation1);
             }
         });
@@ -98,7 +95,7 @@ public class reminderScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gece.setImageResource(R.drawable.geceafter);
-                Animation animation1 = AnimationUtils.loadAnimation(reminderScreen.this,R.anim.fadein);
+                Animation animation1 = AnimationUtils.loadAnimation(ReminderScreen.this,R.anim.fadein);
                 gece.startAnimation(animation1);
             }
         });

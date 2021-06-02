@@ -1,10 +1,6 @@
 package com.example.tektek;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
-import android.graphics.Color;
-import android.media.Image;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
@@ -12,12 +8,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class waterPop extends Activity {
+public class AddWaterPopScreen extends Activity {
     int addwater;
     ImageView tea,tearec,teaolcu,glass,glassrec,glassolcu,cup,cuprec,cupolcu,pcup,pcuprec,pcupolcu,
             bottle,bottlerec,bottleolcu,surahi,surahirec,surahiolcu,musluk,muslukrec,binustu,verigir;
@@ -27,7 +22,7 @@ public class waterPop extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_water_pop);
+        setContentView(R.layout.activity_add_water_pop);
         //burası popup ölçü
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -107,7 +102,7 @@ public class waterPop extends Activity {
             case R.id.tearec :
                 setFirstver();
                 addwater=100;
-                Animation fade = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 tea.setImageResource(R.drawable.teaafter);
                 tea.startAnimation(fade);
                 teaolcu.setImageResource(R.drawable.teaolcuafter);
@@ -121,7 +116,7 @@ public class waterPop extends Activity {
             case R.id.glassrec:
                 setFirstver();
                 addwater=200;
-                Animation fade2 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade2 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 glass.setImageResource(R.drawable.glassafter);
                 glass.startAnimation(fade2);
                 glassolcu.setImageResource(R.drawable.glassolcuafter);
@@ -134,7 +129,7 @@ public class waterPop extends Activity {
             case R.id.cuprec :
                 setFirstver();
                 addwater=300;
-                Animation fade3 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade3 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 cup.setImageResource(R.drawable.cupafter);
                 cup.startAnimation(fade3);
                 cupolcu.setImageResource(R.drawable.cupolcuafter);
@@ -147,7 +142,7 @@ public class waterPop extends Activity {
             case R.id.kartonrec :
                 setFirstver();
                 addwater=400;
-                Animation fade4 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade4 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 pcup.setImageResource(R.drawable.papercupafter);
                 pcup.startAnimation(fade4);
                 pcupolcu.setImageResource(R.drawable.paperolcuafter);
@@ -160,7 +155,7 @@ public class waterPop extends Activity {
             case R.id.siserec :
                 setFirstver();
                 addwater=500;
-                Animation fade5 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade5 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 bottle.setImageResource(R.drawable.bottleafter);
                 bottle.startAnimation(fade5);
                 bottleolcu.setImageResource(R.drawable.bottleolcuafter);
@@ -173,7 +168,7 @@ public class waterPop extends Activity {
             case R.id.surahirec :
                 setFirstver();
                 addwater=1000;
-                Animation fade6 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade6 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 surahi.setImageResource(R.drawable.surahiafter);
                 surahi.startAnimation(fade6);
                 surahiolcu.setImageResource(R.drawable.surahiolcuafter);
@@ -185,7 +180,7 @@ public class waterPop extends Activity {
 
             case R.id.muslukrec :
                 setFirstver();
-                Animation fade7 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade7 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 musluk.setImageResource(R.drawable.muslukafter);
                 musluk.startAnimation(fade7);
                 binustu.setImageResource(R.drawable.binustuafter);

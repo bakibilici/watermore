@@ -5,7 +5,7 @@
     android:id="@+id/middlescreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LauncherActivity">
 
     <View
         android:id="@+id/__bg__iphone_x__xs__11_pro___11"
@@ -17,6 +17,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
@@ -27,8 +28,7 @@
         app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/__bg__iphone_x__xs__11_pro___11"
-        app:layout_constraintVertical_bias="0.261" />
-
+        app:layout_constraintVertical_bias="0.201" />
 
     <ImageView
         android:id="@+id/burger"
@@ -52,7 +52,7 @@
         app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/__bg__iphone_x__xs__11_pro___11"
-        app:layout_constraintVertical_bias="0.528" />
+        app:layout_constraintVertical_bias="0.443" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -64,7 +64,7 @@
         app:layout_constraintHorizontal_bias="0.765"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/__bg__iphone_x__xs__11_pro___11"
-        app:layout_constraintVertical_bias="0.261" />
+        app:layout_constraintVertical_bias="0.201" />
 
     <ImageView
         android:id="@+id/boycu"
@@ -140,6 +140,7 @@
         android:id="@+id/spinnerkg"
         android:layout_width="92dp"
         android:layout_height="39dp"
+        android:popupBackground="@drawable/spinnertext"
         android:background="@drawable/spinnerstyle"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
@@ -153,6 +154,7 @@
         android:id="@+id/spinneryr"
         android:layout_width="92dp"
         android:layout_height="39dp"
+        android:popupBackground="@drawable/spinnertext"
         android:background="@drawable/spinnerstyle3"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
@@ -165,6 +167,7 @@
         android:id="@+id/spinnercm"
         android:layout_width="92dp"
         android:layout_height="39dp"
+        android:popupBackground="@drawable/spinnertext"
         android:background="@drawable/spinnerstyle2"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
@@ -178,83 +181,87 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle25"
-        android:text="Kaydet"
-        android:paddingBottom="15dp"
         android:fontFamily="@font/segoesemibold"
+        android:paddingBottom="15dp"
+        android:src="@drawable/rectangle25"
+        android:text="Kaydet"
+        android:textAllCaps="false"
         android:textColor="@color/darkgray"
         android:textSize="20dp"
-        android:src="@drawable/rectangle25"
-        android:textAllCaps="false"
         app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/__bg__iphone_x__xs__11_pro___11"
-        app:layout_constraintVertical_bias="0.878" />
+        app:layout_constraintVertical_bias="0.812" />
 
     <Spinner
         android:id="@+id/spinnerda"
         android:layout_width="314dp"
         android:layout_height="30dp"
+        android:popupBackground="@drawable/spinnertext"
         android:background="@drawable/spinnerstyle4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/__bg__iphone_x__xs__11_pro___11"
         app:layout_constraintTop_toTopOf="@+id/__bg__iphone_x__xs__11_pro___11"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintVertical_bias="0.61" />
+
 
     <Spinner
         android:id="@+id/spinnerwa"
         android:layout_width="314dp"
         android:layout_height="30dp"
+        android:popupBackground="@drawable/spinnertext"
         android:background="@drawable/spinnerstyle4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/__bg__iphone_x__xs__11_pro___11"
         app:layout_constraintTop_toTopOf="@+id/__bg__iphone_x__xs__11_pro___11"
-        app:layout_constraintVertical_bias="0.74" />
-
-
+        app:layout_constraintVertical_bias="0.682" />
 
     <RadioGroup
+        android:id="@+id/radiogroup"
         android:layout_width="208dp"
         android:layout_height="123dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/__bg__iphone_x__xs__11_pro___11"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.965"
         app:layout_constraintStart_toStartOf="@+id/__bg__iphone_x__xs__11_pro___11"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533">
+        app:layout_constraintVertical_bias="0.442">
 
         <RadioButton
+            android:id="@+id/radio_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/radioselector"
             android:button="@android:color/transparent"
             android:elevation="4dp"
+            android:fontFamily="@font/segoesemibold"
+            android:onClick="onRadioButtonClicked"
             android:paddingLeft="25dp"
             android:paddingBottom="10dp"
             android:text="Erkek"
-            android:fontFamily="@font/segoesemibold"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
 
         <RadioButton
+            android:id="@+id/radio_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/radioselector"
             android:button="@android:color/transparent"
             android:elevation="4dp"
+            android:fontFamily="@font/segoesemibold"
+            android:onClick="onRadioButtonClicked"
             android:paddingLeft="25dp"
             android:paddingBottom="10dp"
             android:text="Kadın"
-            android:fontFamily="@font/segoesemibold"
             android:textColor="@color/white" />
-
-
 
 
     </RadioGroup>

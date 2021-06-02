@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/degerbg"
-    tools:context=".healthdegerler">
+    tools:context=".HealthStats">
 
     <Button
         android:id="@+id/back"
