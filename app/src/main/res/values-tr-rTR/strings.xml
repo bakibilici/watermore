@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--launcher activity -->
+    <string name="app_name">tektek</string>
+    <string name="save">Kaydet</string>
+    <string name="weight">Kilo</string>
+    <string name="height">Boy</string>
+    <string name="age">Yaş</string>
+    <string name="male">Erkek</string>
+    <string name="female">Kadın</string>
+
+    <!--main page -->
+    <string name="welcome">Hoşgeldin!</string>
+    <string name="addwater">Su Ekle</string>
+    <string name="add">Ekle</string>
+    <string name="addreminder">Hatırlatıcı Ekle</string>
+    <string name="goal">Hedef</string>
+    <string name="bmi">Vücut Kitle Endeksi</string>
+    <string name="updateValues">Verileri Güncelle</string>
+    <string name="update">Güncelle</string>
+    <string name="graphs">Grafikler</string>
+    <string name="show">Göster</string>
+    <string name="healthStatistics">Sağlık Değerlerim</string>
+
+    <!--reminder screen -->
+    <string name="morning">Sabah</string>
+    <string name="noon">Öğle</string>
+    <string name="afternoon">İkindi</string>
+    <string name="dusk">Gün Batımı</string>
+    <string name="evening">Akşam</string>
+    <string name="night">Gece</string>
+
+    <!--health stats -->
+    <string name="mainmenu">Ana Menü:</string>
+    <string name="idealweight">İdeal Kilo:</string>
+    <string name="bloodrate">Vücuttaki Kan Miktarı:</string>
+    <string name="basalmetabolicrate">Bazal Metabolizma Hızı:</string>
+    <string name="dailyproteinreq">Günlük Protein İhtiyacı:</string>
+    <string name="dailywaterreq">Günlük Su İhtiyacı:</string>
+    <string name="dailyfatreq">Günlük Yağ İhtiyacı:</string>
+
+</resources>

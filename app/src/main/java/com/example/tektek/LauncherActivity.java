@@ -20,6 +20,7 @@ import com.example.tektek.viewmodel.DbViewModel;
 import com.jakewharton.threetenabp.AndroidThreeTen;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static java.lang.String.valueOf;
@@ -69,13 +70,8 @@ public class LauncherActivity extends AppCompatActivity {
 
 
         //spinner veriler
-        List<String> dailies = new ArrayList<>();
-        dailies.add(0, "Günlük Aktifliğiniz.");
-        dailies.add("Hareket etmiyorum, egzersiz yapmıyorum.");
-        dailies.add("Çok az hareket ediyorum.");
-        dailies.add("Günüm hareketli geçiyor. Hareket ediyorum.");
-        dailies.add("Bolca hareket ediyor , egzersiz yapıyorum.");
-        dailies.add("Spor yapıyorum , aşırı hareket ediyorum.");
+        List<String> dailies = Arrays.asList(getResources().getStringArray(R.array.dailies));
+
         //spinnera array adapte
         ArrayAdapter<String> dailyActivtyArrayAdapter = new ArrayAdapter(this, R.layout.colorspinner, dailies);
         dailyActivtyArrayAdapter.setDropDownViewResource(R.layout.colorspinner_dropdown);
@@ -92,13 +88,8 @@ public class LauncherActivity extends AppCompatActivity {
             }
         });
         //laciverti
-        List<String> weatheries = new ArrayList<>();
-        weatheries.add(0, "Yaşadığınız ortamın genel sıcaklığı.");
-        weatheries.add("Çok sıcak.");
-        weatheries.add("Normal fakat biraz sıcak.");
-        weatheries.add("Normal.");
-        weatheries.add("Normal fakat biraz serin.");
-        weatheries.add("Çok soğuk.");
+        List<String> weatheries = Arrays.asList(getResources().getStringArray(R.array.weatheries));
+
         ArrayAdapter<String> weatherArrayAdapter = new ArrayAdapter(this, R.layout.colorspinner, weatheries);
         weatherArrayAdapter.setDropDownViewResource(R.layout.colorspinner_dropdown);
         spinnerWeather.setAdapter(weatherArrayAdapter);

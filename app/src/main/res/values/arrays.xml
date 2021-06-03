@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dailies">
+        <item>Daily Activity.</item>
+        <item>I do not exercise.</item>
+        <item>I exercise a bit.</item>
+        <item>Normal.</item>
+        <item>I exercise a lot.</item>
+        <item>I overdo exercise.</item>
+
+    </string-array>
+    <string-array name="weatheries">
+        <item>Weather where you live.</item>
+        <item>Very hot.</item>
+        <item>Warm.</item>
+        <item>Normal.</item>
+        <item>Little bit cold.</item>
+        <item>Very cold.</item>
+    </string-array>
+</resources>

@@ -98,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
-        android:text="Kilo"
+        android:text="@string/weight"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -113,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
-        android:text="Yaş"
+        android:text="@string/age"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
@@ -128,7 +128,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
-        android:text="Boy"
+        android:text="@string/height"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
@@ -183,13 +183,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle25"
-        android:text="Kaydet"
-        android:paddingBottom="15dp"
         android:fontFamily="@font/segoesemibold"
+        android:paddingBottom="15dp"
+        android:src="@drawable/rectangle25"
+        android:text="@string/save"
+        android:textAllCaps="false"
         android:textColor="@color/darkgray"
         android:textSize="20dp"
-        android:src="@drawable/rectangle25"
-        android:textAllCaps="false"
         app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -248,7 +248,7 @@
             android:onClick="onRadioButtonClicked"
             android:paddingLeft="25dp"
             android:paddingBottom="10dp"
-            android:text="Erkek"
+            android:text="@string/male"
             android:textColor="@color/white" />
 
         <RadioButton
@@ -262,7 +262,7 @@
             android:onClick="onRadioButtonClicked"
             android:paddingLeft="25dp"
             android:paddingBottom="10dp"
-            android:text="Kadın"
+            android:text="@string/female"
             android:textColor="@color/white" />
 
 

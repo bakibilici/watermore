@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dailies">
+        <item>Günlük Aktifliğiniz.</item>
+        <item>Hareket etmiyorum, egzersiz yapmıyorum.</item>
+        <item>Çok az hareket ediyorum.</item>
+        <item>Günüm hareketli geçiyor. Hareket ediyorum.</item>
+        <item>Bolca hareket ediyor , egzersiz yapıyorum.</item>
+        <item>Spor yapıyorum , aşırı hareket ediyorum.</item>
+
+    </string-array>
+    <string-array name="weatheries">
+        <item>Yaşadığınız ortamın genel sıcaklığı.</item>
+        <item>Çok sıcak.</item>
+        <item>Normal fakat biraz sıcak.</item>
+        <item>Normal.</item>
+        <item>Normal fakat biraz serin.</item>
+        <item>Çok soğuk.</item>
+    </string-array>
+</resources>
