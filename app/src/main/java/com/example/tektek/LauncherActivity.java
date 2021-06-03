@@ -16,6 +16,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import com.example.tektek.database.UserTable;
+import com.example.tektek.utils.Constants;
 import com.example.tektek.viewmodel.DbViewModel;
 import com.jakewharton.threetenabp.AndroidThreeTen;
 
@@ -40,9 +41,14 @@ public class LauncherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
-
-
         AndroidThreeTen.init(this);
+        lastUserRecord.height=0;
+        lastUserRecord.weight=0;
+        lastUserRecord.dailyActivity=0;
+        lastUserRecord.age=0;
+        lastUserRecord.gender=0;
+        lastUserRecord.temperature=0;
+
         DbViewModel dbViewModel=new DbViewModel(this.getApplication());
 
 
@@ -210,11 +216,15 @@ public class LauncherActivity extends AppCompatActivity {
                         user.temperature== lastUserRecord.temperature&&
                         user.dailyActivity== lastUserRecord.dailyActivity&&
                         user.weight== lastUserRecord.weight&&
-                        user.temperature== lastUserRecord.temperature&&
                         user.height== lastUserRecord.height;
 
+
                 if(!equalCondition){
+                    //calculations
                     dbViewModel.insertOne(user); //insert the record if its changed
+                    //take added water field from last record (if there is a record)
+                    //if there is no last record just insert
+                    //bmi,protein and other stuff will be added to insertion because they are only dependent to this page
                 }
 
                 goMainScreen();
@@ -225,19 +235,23 @@ public class LauncherActivity extends AppCompatActivity {
 
 
         dbViewModel.getLastRecord().observe(this,response->{
-            lastUserRecord =response;
-            spinnerDailyActivity.setSelection(lastUserRecord.dailyActivity);
-            spinnerWeather.setSelection(lastUserRecord.temperature);
-            spinnerweight.setSelection(weightArrayAdapter.getPosition( Integer.toString(lastUserRecord.weight)));
-            spinnerheight.setSelection(heightArrayAdapter.getPosition( Integer.toString(lastUserRecord.height)));
-            spinnerage.setSelection(ageArrayAdapter.getPosition(Integer.toString(lastUserRecord.age)));
-            if(lastUserRecord.gender==0){
-                radioButtonMale.setChecked(true);
-                user.gender=0;
-            }else{
-                radioButtonFemale.setChecked(true);
-                user.gender=1;
+
+            if (response != null) {
+                spinnerDailyActivity.setSelection(response.dailyActivity);
+                spinnerWeather.setSelection(response.temperature);
+                spinnerweight.setSelection(weightArrayAdapter.getPosition( Integer.toString(response.weight)));
+                spinnerheight.setSelection(heightArrayAdapter.getPosition( Integer.toString(response.height)));
+                spinnerage.setSelection(ageArrayAdapter.getPosition(Integer.toString(response.age)));
+                if(response.gender==Constants.GENDER_MALE){
+                    radioButtonMale.setChecked(true);
+                    user.gender=Constants.GENDER_MALE;
+                }else{
+                    radioButtonFemale.setChecked(true);
+                    user.gender=Constants.GENDER_FEMALE;
+                }
+                lastUserRecord =response;
             }
+
 
         });
 
@@ -252,11 +266,11 @@ public class LauncherActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.radio_male:
                 if (checked)
-                    user.gender=0;
+                    user.gender=Constants.GENDER_MALE;
                 break;
             case R.id.radio_female:
                 if (checked)
-                    user.gender=1;
+                    user.gender=Constants.GENDER_FEMALE;
                 break;
         }
     }

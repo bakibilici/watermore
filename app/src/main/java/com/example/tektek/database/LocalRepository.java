@@ -11,16 +11,13 @@ import java.util.List;
 public class LocalRepository {
 
     private Dao dao;
-    private LiveData<List<UserTable>> allRecords;
+    private LiveData<String> date;
     private LiveData<UserTable> oneLastRecord;
     public LocalRepository(Application application){
         AppDatabase db= AppDatabase.getDatabase(application);
         dao=db.Dao();
     }
-    public LiveData<List<UserTable>> getAllRecords(){
-        allRecords =dao.getAllRecords();
-        return allRecords;
-    }
+
     public void insertData(UserTable userTable){
     AppDatabase.databaseWriteExecutor.execute(()->{
         userTable.date= OffsetDateTime.now();
@@ -28,15 +25,22 @@ public class LocalRepository {
     });
     }
 
-    public LiveData<List<UserTable>> getAllRecordsByDate(){
-        allRecords =dao.getAllRecordsByDate();
-        return allRecords;
+    public LiveData<String> getLastDate(){
+        date =dao.getLastDate();
+        return date;
     }
 
 
     public LiveData<UserTable> getLastRecord(){
         oneLastRecord= dao.getLastRecord();
         return oneLastRecord;
+    }
+
+    public void update(int drunk){
+        AppDatabase.databaseWriteExecutor.execute(()->{
+            dao.update(drunk);
+        });
+
     }
 
 }

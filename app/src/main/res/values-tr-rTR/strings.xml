@@ -32,11 +32,16 @@
 
     <!--health stats -->
     <string name="mainmenu">Ana Menü:</string>
-    <string name="idealweight">İdeal Kilo:</string>
+    <string name="idealweight">İdeal Kilo Aralığı:</string>
     <string name="bloodrate">Vücuttaki Kan Miktarı:</string>
     <string name="basalmetabolicrate">Bazal Metabolizma Hızı:</string>
     <string name="dailyproteinreq">Günlük Protein İhtiyacı:</string>
     <string name="dailywaterreq">Günlük Su İhtiyacı:</string>
     <string name="dailyfatreq">Günlük Yağ İhtiyacı:</string>
+
+    <!--add water pop -->
+    <string name="portion">Porsiyon Seçiniz</string>
+    <string name="enteramount">Miktarı Buraya Girin:</string>
+    <string name="example">Örneğin: 1350</string>
 
 </resources>

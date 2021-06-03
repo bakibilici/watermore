@@ -12,17 +12,44 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class AddWaterPopScreen extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LifecycleOwner;
+
+import com.example.tektek.database.UserTable;
+import com.example.tektek.utils.TiviTypeConverters;
+import com.example.tektek.viewmodel.DbViewModel;
+import com.jakewharton.threetenabp.AndroidThreeTen;
+
+import org.threeten.bp.OffsetDateTime;
+
+public class AddWaterPopScreen extends AppCompatActivity {
     int addwater;
     ImageView tea,tearec,teaolcu,glass,glassrec,glassolcu,cup,cuprec,cupolcu,pcup,pcuprec,pcupolcu,
             bottle,bottlerec,bottleolcu,surahi,surahirec,surahiolcu,musluk,muslukrec,binustu,verigir;
     TextView binustuyazi,binustuml;
     EditText binustuveri;
 
+    DbViewModel dbViewModel;
+    boolean isLastRecordToday;
+    UserTable userTable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_water_pop);
+
+        //Database and time stuff
+        AndroidThreeTen.init(this);
+        dbViewModel=new DbViewModel(getApplication());
+        dbViewModel.getLastDate().observe(this, response->{
+            if(response!=null){
+                isLastRecordToday= OffsetDateTime.now().getDayOfMonth()== TiviTypeConverters.toOffsetDateTime(dbViewModel.getLastDate().getValue()).getDayOfMonth();
+
+            }
+
+        });
+
+
+
         //burası popup ölçü
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -33,7 +60,7 @@ public class AddWaterPopScreen extends Activity {
         params.gravity = Gravity.CENTER;
         params.x=0;
         params.y=-20;
-        //her içilen mL için 3 eleman var onları danımladım
+        //her içilen mL için 3 eleman var onları tanımladım
         getWindow().setAttributes(params);
         tea = findViewById(R.id.tea);
         tearec = findViewById(R.id.tearec);
@@ -100,6 +127,7 @@ public class AddWaterPopScreen extends Activity {
     public void OnClick(View v){
         switch (v.getId()){
             case R.id.tearec :
+
                 setFirstver();
                 addwater=100;
                 Animation fade = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
@@ -193,6 +221,21 @@ public class AddWaterPopScreen extends Activity {
                 binustuyazi.setVisibility(View.VISIBLE);
                 break;
         }
+    }
+
+
+    //check the date, if the last record is today
+    //then add water, otherwise create new record with last values (except the drunk, drunk should be zeroed) then add water
+    public void onSavePortionClicked(View view) throws NullPointerException{
+        if(isLastRecordToday){
+            dbViewModel.update(addwater);
+        }else{
+            userTable=dbViewModel.getLastRecord().getValue();
+            userTable.drunk=addwater;
+            dbViewModel.insertOne(userTable);
+
+        }
+        AddWaterPopScreen.this.finish();
     }
 
 }

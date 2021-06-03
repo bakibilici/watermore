@@ -30,12 +30,17 @@
 
     <!--health stats -->
     <string name="mainmenu">Main Menu:</string>
-    <string name="idealweight">Ideal Weight:</string>
+    <string name="idealweight">Ideal Weight Interval:</string>
     <string name="bloodrate">Blood Rate:</string>
     <string name="basalmetabolicrate">Basal Metabolism Rate:</string>
     <string name="dailyproteinreq">Daily Protein Requierement:</string>
     <string name="dailywaterreq">Daily Water Requirement:</string>
     <string name="dailyfatreq">Daily Fat Requirement:</string>
+
+    <!--add water pop -->
+    <string name="portion">Please Choose Portion</string>
+    <string name="enteramount">Enter Amount Here:</string>
+    <string name="example">Example:1350</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>

@@ -35,6 +35,28 @@ public class UserTable {
     @ColumnInfo(name= "temperature")
     public int temperature;
 
+    @ColumnInfo(name= "drunk")
+    public int drunk;
+
+    @ColumnInfo(name="goal")
+    public int goal;
+
+    @ColumnInfo(name ="bmi")
+    public int bmi;
+
+    @ColumnInfo(name ="idealminweight")
+    public int idealminweight;
+
+    @ColumnInfo(name ="idealmaxweight")
+    public int idealmaxweight;
+
+    @ColumnInfo(name = "proteinminreq")
+    public int proteinminreq;
+
+    @ColumnInfo(name = "proteinmaxreq")
+    public int proteinmaxreq;
+
+
     @TypeConverters(TiviTypeConverters.class)
     @ColumnInfo(name = "date")
     OffsetDateTime date;
