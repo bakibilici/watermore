@@ -31,13 +31,15 @@
     <string name="night">Gece</string>
 
     <!--health stats -->
-    <string name="mainmenu">Ana Menü:</string>
+    <string name="mainmenu">Ana Menü</string>
     <string name="idealweight">İdeal Kilo Aralığı:</string>
     <string name="bloodrate">Vücuttaki Kan Miktarı:</string>
     <string name="basalmetabolicrate">Bazal Metabolizma Hızı:</string>
     <string name="dailyproteinreq">Günlük Protein İhtiyacı:</string>
     <string name="dailywaterreq">Günlük Su İhtiyacı:</string>
     <string name="dailyfatreq">Günlük Yağ İhtiyacı:</string>
+    <string name="bmishort">Vki</string>
+    <string name="bmitwodot">Vücut Kitle Endeksi:</string>
 
     <!--add water pop -->
     <string name="portion">Porsiyon Seçiniz</string>

@@ -2,9 +2,10 @@ package com.example.tektek.utils;
 
 public class Calculations {
 
-    public int goalWater(int weight){
-        return (int)(weight*Constants.WATER_CONSTANT); //mL
+    public double goalWater(int weight){
+        return (weight*Constants.WATER_CONSTANT); //mL
     }
+
     public double bmi(int weight, int height){
         height=height/100; //cm to meter
         return weight/(height*height); // kg/m2
@@ -54,13 +55,13 @@ public class Calculations {
     public int dailymaxprotein(int weight, int bmi){
         int maxprotein=0;
         if(bmi<18.49){
-            maxprotein= (int) (weight*1.1);
+            maxprotein= (int) (weight*1.3);
         }
         if(bmi>18.5 && bmi<24.99){
-            maxprotein= (int) (weight*1.4);
+            maxprotein= (int) (weight*1.8);
         }
         if(bmi>25){
-            maxprotein= (int) (weight*1.2);
+            maxprotein= (int) (weight*1.5);
         }
         return maxprotein;
     }

@@ -11,17 +11,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.tektek.utils.Calculations;
+import com.example.tektek.viewmodel.DbViewModel;
+
 public class HealthStats extends AppCompatActivity {
 
     public void turnMainScreen(){
         Intent intent = new Intent(this, MainPage.class);
         startActivity(intent);
     }
-
+    Calculations calculations=new Calculations();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_healthstats);
+
+        DbViewModel dbViewModel=new DbViewModel(getApplication());
 
         Button geri =(Button) findViewById(R.id.back);
         ImageView ana = findViewById(R.id.anaresim);
@@ -42,13 +47,27 @@ public class HealthStats extends AppCompatActivity {
         TextView t6 = findViewById(R.id.gpi);
         TextView t7 = findViewById(R.id.gsi);
         TextView t8 = findViewById(R.id.gyi);
-        TextView d1 = findViewById(R.id.deger1);
-        TextView d2 = findViewById(R.id.deger2);
-        TextView d3 = findViewById(R.id.deger3);
-        TextView d4 = findViewById(R.id.deger4);
-        TextView d5 = findViewById(R.id.deger5);
-        TextView d6 = findViewById(R.id.deger6);
-        TextView d7 = findViewById(R.id.deger7);
+
+        TextView d1 = findViewById(R.id.bmitext);
+        TextView d2 = findViewById(R.id.idealweighttext);
+        TextView d3 = findViewById(R.id.bloodratetext);
+        TextView d4 = findViewById(R.id.basalmetatext);
+        TextView d5 = findViewById(R.id.dailyproteintext);
+        TextView d6 = findViewById(R.id.dailywatertext);
+        TextView d7 = findViewById(R.id.dailyfattext);
+
+
+        dbViewModel.getLastRecord().observe(this,response->{
+            d1.setText(String.valueOf(response.bmi)+" "+ getResources().getString(R.string.bmishort));
+            d2.setText(String.valueOf(response.idealminweight)+"-"+String.valueOf(response.idealmaxweight)+" kg");
+            d3.setText(String.valueOf(calculations.bloodRate(response.gender,response.weight))+" mL");
+            int bmh=calculations.bmh(response.gender,response.weight,response.height,response.age);
+            d4.setText(String.valueOf(bmh));
+            d5.setText(String.valueOf(response.proteinminreq)+"-"+String.valueOf(response.proteinmaxreq)+" gr");
+            d6.setText(String.valueOf(String.format("%.2f", response.goal))+" L");
+            d7.setText(String.valueOf(calculations.minFat(bmh))+"-"+String.valueOf(calculations.maxFat(bmh))+" gr");
+        });
+
         Animation animation1 = AnimationUtils.loadAnimation(HealthStats.this,R.anim.fadein);
         Animation animation2 = AnimationUtils.loadAnimation(HealthStats.this,R.anim.lefttoright);
         Animation animation3 = AnimationUtils.loadAnimation(HealthStats.this,R.anim.bounce);

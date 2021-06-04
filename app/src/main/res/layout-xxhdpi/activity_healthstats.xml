@@ -129,10 +129,10 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintHorizontal_bias="0.292"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
+        app:layout_constraintVertical_bias="0.679" />
 
     <TextView
         android:id="@+id/vkm"
@@ -169,7 +169,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
-        android:text="@string/bmi"
+        android:text="@string/bmitwodot"
         android:textColor="@color/gray"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -264,7 +264,7 @@
         app:layout_constraintVertical_bias="0.844" />
 
     <TextView
-        android:id="@+id/deger1"
+        android:id="@+id/bmitext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
@@ -279,7 +279,7 @@
         app:layout_constraintVertical_bias="0.338" />
 
     <TextView
-        android:id="@+id/deger2"
+        android:id="@+id/idealweighttext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
@@ -294,7 +294,7 @@
         app:layout_constraintVertical_bias="0.416" />
 
     <TextView
-        android:id="@+id/deger3"
+        android:id="@+id/bloodratetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
@@ -309,7 +309,7 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <TextView
-        android:id="@+id/deger4"
+        android:id="@+id/basalmetatext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
@@ -324,7 +324,7 @@
         app:layout_constraintVertical_bias="0.585" />
 
     <TextView
-        android:id="@+id/deger5"
+        android:id="@+id/dailyproteintext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
@@ -339,7 +339,7 @@
         app:layout_constraintVertical_bias="0.673" />
 
     <TextView
-        android:id="@+id/deger6"
+        android:id="@+id/dailywatertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
@@ -354,7 +354,7 @@
         app:layout_constraintVertical_bias="0.759" />
 
     <TextView
-        android:id="@+id/deger7"
+        android:id="@+id/dailyfattext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"

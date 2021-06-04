@@ -38,8 +38,9 @@ public class UserTable {
     @ColumnInfo(name= "drunk")
     public int drunk;
 
+    //below columns added to track the progress in graphics
     @ColumnInfo(name="goal")
-    public int goal;
+    public double goal;
 
     @ColumnInfo(name ="bmi")
     public int bmi;

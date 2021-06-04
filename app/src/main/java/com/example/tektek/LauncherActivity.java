@@ -16,6 +16,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import com.example.tektek.database.UserTable;
+import com.example.tektek.utils.Calculations;
 import com.example.tektek.utils.Constants;
 import com.example.tektek.viewmodel.DbViewModel;
 import com.jakewharton.threetenabp.AndroidThreeTen;
@@ -37,6 +38,7 @@ public class LauncherActivity extends AppCompatActivity {
 
     UserTable user=new UserTable();
     UserTable lastUserRecord =new UserTable();
+    Calculations calculations;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +52,7 @@ public class LauncherActivity extends AppCompatActivity {
         lastUserRecord.temperature=0;
 
         DbViewModel dbViewModel=new DbViewModel(this.getApplication());
-
+        calculations=new Calculations();
 
         //Radio Group
         RadioGroup radioGroup=findViewById(R.id.radiogroup);
@@ -220,7 +222,14 @@ public class LauncherActivity extends AppCompatActivity {
 
 
                 if(!equalCondition){
-                    //calculations
+                    //calculations.java
+                    user.bmi=(int)calculations.bmi(user.weight,user.height);
+                    user.idealminweight=calculations.idealMinWeight(user.height);
+                    user.idealmaxweight=calculations.idealMaxWeight(user.height);
+                    user.goal=calculations.goalWater(user.weight);
+                    user.proteinmaxreq=calculations.dailymaxprotein(user.weight,user.bmi);
+                    user.proteinminreq=calculations.dailyminprotein(user.weight,user.bmi);
+
                     dbViewModel.insertOne(user); //insert the record if its changed
                     //take added water field from last record (if there is a record)
                     //if there is no last record just insert
@@ -242,6 +251,7 @@ public class LauncherActivity extends AppCompatActivity {
                 spinnerweight.setSelection(weightArrayAdapter.getPosition( Integer.toString(response.weight)));
                 spinnerheight.setSelection(heightArrayAdapter.getPosition( Integer.toString(response.height)));
                 spinnerage.setSelection(ageArrayAdapter.getPosition(Integer.toString(response.age)));
+                user.drunk=response.drunk;//bu biiiiiiiiiiiiiiiiiiiiiiiiiiir
                 if(response.gender==Constants.GENDER_MALE){
                     radioButtonMale.setChecked(true);
                     user.gender=Constants.GENDER_MALE;
@@ -250,6 +260,7 @@ public class LauncherActivity extends AppCompatActivity {
                     user.gender=Constants.GENDER_FEMALE;
                 }
                 lastUserRecord =response;
+
             }
 
 
