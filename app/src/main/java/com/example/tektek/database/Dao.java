@@ -23,8 +23,11 @@ public interface Dao {
     LiveData<UserTable> getLastRecord();
 //SELECT * FROM UserTable WHERE date=(SELECT MAX(date) FROM UserTable)
 
-    @Query("SELECT * FROM UserTable ORDER BY date DESC LIMIT 7") //for graphics
-    LiveData<UserTable> getLastSevenRecord();
+    @Query("SELECT * FROM UserTable ORDER BY date DESC LIMIT 8") //for graphics
+    LiveData<List<UserTable>> getLastSevenRecord();
+
+    @Query("SELECT date FROM UserTable ORDER BY date DESC LIMIT 8") //for graphics
+    LiveData<List<String>> getLastSevenRecordDate();
 
     @Query("UPDATE UserTable SET drunk = :drunk + drunk WHERE recordId=(SELECT Max(recordId) FROM UserTable)")
     void update(int drunk);

@@ -19,7 +19,7 @@
     <string name="graphs">Graphics</string>
     <string name="show">Show</string>
     <string name="healthStatistics">Health Statistics</string>
-    
+
     <!--reminder screen -->
     <string name="morning">Morning</string>
     <string name="noon">Noon</string>
@@ -43,7 +43,6 @@
     <string name="portion">Please Choose Portion</string>
     <string name="enteramount">Enter Amount Here:</string>
     <string name="example">Example:1350</string>
-
 
 
     <!-- TODO: Remove or change this placeholder text -->

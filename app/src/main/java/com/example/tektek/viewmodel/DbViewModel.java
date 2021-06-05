@@ -16,13 +16,23 @@ public class DbViewModel extends ViewModel {
     private static LocalRepository localRepository;
     private LiveData<String> lastDate;
     private LiveData<UserTable> oneTable;
+    private LiveData<List<UserTable>> multipleRecords;
+    private LiveData<List<String>> multipleRecordsDate;
 
     public DbViewModel(Application application){
         this.localRepository=new LocalRepository(application);
         oneTable= localRepository.getLastRecord();
         lastDate= localRepository.getLastDate();
+        multipleRecords=localRepository.getLastSevenRecord();
+        multipleRecordsDate=localRepository.getLastSevenRecordDate();
     }
 
+    public LiveData<List<UserTable>> getLastSevenRecords(){
+        return multipleRecords;
+    }
+    public LiveData<List<String>> getLastSevenRecordsDate(){
+        return multipleRecordsDate;
+    }
 
     public LiveData<String> getLastDate(){
         return lastDate;

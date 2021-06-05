@@ -12,7 +12,9 @@ public class LocalRepository {
 
     private Dao dao;
     private LiveData<String> date;
+    private LiveData<List<String>> multipleRecordDates;
     private LiveData<UserTable> oneLastRecord;
+    private LiveData<List<UserTable>> multipleRecords;
     public LocalRepository(Application application){
         AppDatabase db= AppDatabase.getDatabase(application);
         dao=db.Dao();
@@ -34,6 +36,15 @@ public class LocalRepository {
     public LiveData<UserTable> getLastRecord(){
         oneLastRecord= dao.getLastRecord();
         return oneLastRecord;
+    }
+    public LiveData<List<UserTable>> getLastSevenRecord(){
+        multipleRecords=dao.getLastSevenRecord();
+        return multipleRecords;
+    }
+
+    public LiveData<List<String>> getLastSevenRecordDate(){
+        multipleRecordDates=dao.getLastSevenRecordDate();
+        return multipleRecordDates;
     }
 
     public void update(int drunk){

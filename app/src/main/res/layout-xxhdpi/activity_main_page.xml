@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.029" />
 
     <TextView
-        android:id="@+id/damlayuzde"
+        android:id="@+id/droppercentage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
@@ -258,6 +258,7 @@
         app:layout_constraintVertical_bias="0.24" />
 
     <TextView
+        android:id="@+id/goalwatertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoesemibold"
@@ -311,7 +312,7 @@
         app:layout_constraintVertical_bias="0.235" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/bmitextmainpage"
         android:layout_width="68dp"
         android:layout_height="22dp"
         android:fontFamily="@font/segoesemibold"
@@ -485,7 +486,7 @@
         app:layout_constraintVertical_bias="0.366" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/graphicShowButton"
         android:layout_width="95dp"
         android:layout_height="53dp"
         android:background="@drawable/statshower"

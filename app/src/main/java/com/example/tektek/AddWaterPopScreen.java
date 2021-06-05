@@ -42,7 +42,8 @@ public class AddWaterPopScreen extends AppCompatActivity {
         dbViewModel=new DbViewModel(getApplication());
         dbViewModel.getLastDate().observe(this, response->{
             if(response!=null){
-                isLastRecordToday= OffsetDateTime.now().getDayOfMonth()== TiviTypeConverters.toOffsetDateTime(dbViewModel.getLastDate().getValue()).getDayOfMonth();
+                isLastRecordToday= OffsetDateTime.now().getDayOfMonth()==
+                        TiviTypeConverters.toOffsetDateTime(dbViewModel.getLastDate().getValue()).getDayOfMonth();
 
             }
 

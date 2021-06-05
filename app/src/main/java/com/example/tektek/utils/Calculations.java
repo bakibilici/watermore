@@ -7,8 +7,9 @@ public class Calculations {
     }
 
     public double bmi(int weight, int height){
-        height=height/100; //cm to meter
-        return weight/(height*height); // kg/m2
+        double doubleheight=(double) height;
+        doubleheight=doubleheight/100; //cm to meter
+        return (double) (weight/(doubleheight*doubleheight)); // kg/m2
     }
 
     public int idealMinWeight(int height){
