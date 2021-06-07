@@ -81,6 +81,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.393" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoe400"
+        android:text="Sabah"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sabahalarm"
+        app:layout_constraintEnd_toEndOf="@+id/sabahalarm"
+        app:layout_constraintHorizontal_bias="0.510"
+        app:layout_constraintStart_toStartOf="@+id/sabahalarm"
+        app:layout_constraintTop_toTopOf="@+id/sabahalarm"
+        app:layout_constraintVertical_bias="0.75" />
+
     <ImageView
         android:id="@+id/oglealarm"
         android:layout_width="100dp"
@@ -92,6 +105,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.393" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoe400"
+        android:text="Öğle"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/oglealarm"
+        app:layout_constraintEnd_toEndOf="@+id/oglealarm"
+        app:layout_constraintStart_toStartOf="@+id/oglealarm"
+        app:layout_constraintTop_toTopOf="@+id/oglealarm"
+        app:layout_constraintVertical_bias="0.75" />
 
     <ImageView
         android:id="@+id/ikindialarm"
@@ -105,6 +130,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.393" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoe400"
+        android:text="İkindi"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ikindialarm"
+        app:layout_constraintEnd_toEndOf="@+id/ikindialarm"
+        app:layout_constraintHorizontal_bias="0.510"
+        app:layout_constraintStart_toStartOf="@+id/ikindialarm"
+        app:layout_constraintTop_toTopOf="@+id/ikindialarm"
+        app:layout_constraintVertical_bias="0.75" />
+
     <ImageView
         android:id="@+id/gunbatimialarm"
         android:layout_width="100dp"
@@ -116,6 +154,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.626" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoe400"
+        android:text="Gün Batımı"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gunbatimialarm"
+        app:layout_constraintEnd_toEndOf="@+id/gunbatimialarm"
+        app:layout_constraintHorizontal_bias="0.510"
+        app:layout_constraintStart_toStartOf="@+id/gunbatimialarm"
+        app:layout_constraintTop_toTopOf="@+id/gunbatimialarm"
+        app:layout_constraintVertical_bias="0.75" />
 
     <ImageView
         android:id="@+id/aksamalarm"
@@ -129,6 +180,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.626" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoe400"
+        android:text="Akşam"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/aksamalarm"
+        app:layout_constraintEnd_toEndOf="@+id/aksamalarm"
+        app:layout_constraintHorizontal_bias="0.510"
+        app:layout_constraintStart_toStartOf="@+id/aksamalarm"
+        app:layout_constraintTop_toTopOf="@+id/aksamalarm"
+        app:layout_constraintVertical_bias="0.75" />
+
     <ImageView
         android:id="@+id/gecealarm"
         android:layout_width="100dp"
@@ -140,6 +204,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.626" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoe400"
+        android:text="Gece"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gecealarm"
+        app:layout_constraintEnd_toEndOf="@+id/gecealarm"
+        app:layout_constraintHorizontal_bias="0.510"
+        app:layout_constraintStart_toStartOf="@+id/gecealarm"
+        app:layout_constraintTop_toTopOf="@+id/gecealarm"
+        app:layout_constraintVertical_bias="0.75" />
 
     <Button
         android:id="@+id/button3"

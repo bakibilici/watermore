@@ -19,9 +19,9 @@ import android.widget.TextView;
 
 public class waterPop extends Activity {
     int addwater;
-    ImageView tea,tearec,teaolcu,glass,glassrec,glassolcu,cup,cuprec,cupolcu,pcup,pcuprec,pcupolcu,
-            bottle,bottlerec,bottleolcu,surahi,surahirec,surahiolcu,musluk,muslukrec,binustu,verigir;
-    TextView binustuyazi,binustuml;
+    ImageView tea,tearec,glass,glassrec,cup,cuprec,pcup,pcuprec,
+            bottle,bottlerec,surahi,surahirec,musluk,muslukrec,verigir;
+    TextView binustuyazi,binustuml,teaolcu,glassolcu,cupolcu,pcupolcu,bottleolcu,surahiolcu,binustu;
     EditText binustuveri;
 
     @Override
@@ -80,25 +80,25 @@ public class waterPop extends Activity {
     }
     public void setFirstver(){
         tea.setImageResource(R.drawable.tea);
-        teaolcu.setImageResource(R.drawable.teaolcu);
+        teaolcu.setTextColor(Color.BLACK);
         tearec.setImageResource(R.color.transparent);
         glass.setImageResource(R.drawable.waterglass);
-        glassolcu.setImageResource(R.drawable.bardakolcu);
+        glassolcu.setTextColor(Color.BLACK);
         glassrec.setImageResource(R.color.transparent);
         cup.setImageResource(R.drawable.cup);
-        cupolcu.setImageResource(R.drawable.cupolcu);
+        cupolcu.setTextColor(Color.BLACK);
         cuprec.setImageResource(R.color.transparent);
         pcup.setImageResource(R.drawable.papercup);
-        pcupolcu.setImageResource(R.drawable.kartonolcu);
+        pcupolcu.setTextColor(Color.BLACK);
         pcuprec.setImageResource(R.color.transparent);
         bottle.setImageResource(R.drawable.bottle);
-        bottleolcu.setImageResource(R.drawable.bottleolcu);
+        bottleolcu.setTextColor(Color.BLACK);
         bottlerec.setImageResource(R.color.transparent);
         surahi.setImageResource(R.drawable.surahi);
-        surahiolcu.setImageResource(R.drawable.surahiolcu);
+        surahiolcu.setTextColor(Color.BLACK);
         surahirec.setImageResource(R.color.transparent);
         musluk.setImageResource(R.drawable.musluk);
-        binustu.setImageResource(R.drawable.binustu);
+        binustu.setTextColor(Color.BLACK);
         muslukrec.setImageResource(R.color.transparent);
     }
 
@@ -110,7 +110,7 @@ public class waterPop extends Activity {
                 Animation fade = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
                 tea.setImageResource(R.drawable.teaafter);
                 tea.startAnimation(fade);
-                teaolcu.setImageResource(R.drawable.teaolcuafter);
+                teaolcu.setTextColor(Color.WHITE);
                 teaolcu.startAnimation(fade);
                 tearec.setImageResource(R.drawable.addwaterselectedblue);
                 tearec.startAnimation(fade);
@@ -124,7 +124,7 @@ public class waterPop extends Activity {
                 Animation fade2 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
                 glass.setImageResource(R.drawable.glassafter);
                 glass.startAnimation(fade2);
-                glassolcu.setImageResource(R.drawable.glassolcuafter);
+                glassolcu.setTextColor(Color.WHITE);
                 glassolcu.startAnimation(fade2);
                 glassrec.setImageResource(R.drawable.addwaterselectedred);
                 glassrec.startAnimation(fade2);
@@ -137,7 +137,7 @@ public class waterPop extends Activity {
                 Animation fade3 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
                 cup.setImageResource(R.drawable.cupafter);
                 cup.startAnimation(fade3);
-                cupolcu.setImageResource(R.drawable.cupolcuafter);
+                cupolcu.setTextColor(Color.WHITE);
                 cupolcu.startAnimation(fade3);
                 cuprec.setImageResource(R.drawable.addwaterselectedblue);
                 cuprec.startAnimation(fade3);
@@ -150,7 +150,7 @@ public class waterPop extends Activity {
                 Animation fade4 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
                 pcup.setImageResource(R.drawable.papercupafter);
                 pcup.startAnimation(fade4);
-                pcupolcu.setImageResource(R.drawable.paperolcuafter);
+                pcupolcu.setTextColor(Color.WHITE);
                 pcupolcu.startAnimation(fade4);
                 pcuprec.setImageResource(R.drawable.addwaterselectedred);
                 pcuprec.startAnimation(fade4);
@@ -163,7 +163,7 @@ public class waterPop extends Activity {
                 Animation fade5 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
                 bottle.setImageResource(R.drawable.bottleafter);
                 bottle.startAnimation(fade5);
-                bottleolcu.setImageResource(R.drawable.bottleolcuafter);
+                bottleolcu.setTextColor(Color.WHITE);
                 bottleolcu.startAnimation(fade5);
                 bottlerec.setImageResource(R.drawable.addwaterselectedblue);
                 bottlerec.startAnimation(fade5);
@@ -176,7 +176,7 @@ public class waterPop extends Activity {
                 Animation fade6 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
                 surahi.setImageResource(R.drawable.surahiafter);
                 surahi.startAnimation(fade6);
-                surahiolcu.setImageResource(R.drawable.surahiolcuafter);
+                surahiolcu.setTextColor(Color.WHITE);
                 surahiolcu.startAnimation(fade6);
                 surahirec.setImageResource(R.drawable.addwaterselectedred);
                 surahirec.startAnimation(fade6);
@@ -188,7 +188,7 @@ public class waterPop extends Activity {
                 Animation fade7 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
                 musluk.setImageResource(R.drawable.muslukafter);
                 musluk.startAnimation(fade7);
-                binustu.setImageResource(R.drawable.binustuafter);
+                binustu.setTextColor(Color.WHITE);
                 binustu.startAnimation(fade7);
                 muslukrec.setImageResource(R.drawable.addwaterselectedblue);
                 muslukrec.startAnimation(fade7);
