@@ -17,15 +17,15 @@
         android:roundIcon="@mipmap/watermoreicon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tektek">
-        <activity android:name=".reminderScreen"></activity>
-        <activity android:name=".healthdegerler" />
+        <activity android:name=".ReminderScreen"></activity>
+        <activity android:name=".HealthStats" />
         <activity
             android:name=".usernamesPop"
             android:theme="@style/PopMe" />
         <activity
-            android:name=".waterPop"
+            android:name=".AddWaterPopScreen"
             android:theme="@style/PopMe" />
-        <activity android:name=".mainPage" />
+        <activity android:name=".MainPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

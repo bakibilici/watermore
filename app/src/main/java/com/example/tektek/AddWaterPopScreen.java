@@ -1,10 +1,7 @@
 package com.example.tektek;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.graphics.Color;
-import android.media.Image;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
@@ -12,12 +9,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class waterPop extends Activity {
+public class AddWaterPopScreen extends Activity {
     int addwater;
     ImageView tea,tearec,glass,glassrec,cup,cuprec,pcup,pcuprec,
             bottle,bottlerec,surahi,surahirec,musluk,muslukrec,verigir;
@@ -107,7 +103,7 @@ public class waterPop extends Activity {
             case R.id.tearec :
                 setFirstver();
                 addwater=100;
-                Animation fade = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 tea.setImageResource(R.drawable.teaafter);
                 tea.startAnimation(fade);
                 teaolcu.setTextColor(Color.WHITE);
@@ -121,7 +117,7 @@ public class waterPop extends Activity {
             case R.id.glassrec:
                 setFirstver();
                 addwater=200;
-                Animation fade2 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade2 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 glass.setImageResource(R.drawable.glassafter);
                 glass.startAnimation(fade2);
                 glassolcu.setTextColor(Color.WHITE);
@@ -134,7 +130,7 @@ public class waterPop extends Activity {
             case R.id.cuprec :
                 setFirstver();
                 addwater=300;
-                Animation fade3 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade3 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 cup.setImageResource(R.drawable.cupafter);
                 cup.startAnimation(fade3);
                 cupolcu.setTextColor(Color.WHITE);
@@ -147,7 +143,7 @@ public class waterPop extends Activity {
             case R.id.kartonrec :
                 setFirstver();
                 addwater=400;
-                Animation fade4 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade4 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 pcup.setImageResource(R.drawable.papercupafter);
                 pcup.startAnimation(fade4);
                 pcupolcu.setTextColor(Color.WHITE);
@@ -160,7 +156,7 @@ public class waterPop extends Activity {
             case R.id.siserec :
                 setFirstver();
                 addwater=500;
-                Animation fade5 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade5 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 bottle.setImageResource(R.drawable.bottleafter);
                 bottle.startAnimation(fade5);
                 bottleolcu.setTextColor(Color.WHITE);
@@ -173,7 +169,7 @@ public class waterPop extends Activity {
             case R.id.surahirec :
                 setFirstver();
                 addwater=1000;
-                Animation fade6 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade6 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 surahi.setImageResource(R.drawable.surahiafter);
                 surahi.startAnimation(fade6);
                 surahiolcu.setTextColor(Color.WHITE);
@@ -185,7 +181,7 @@ public class waterPop extends Activity {
 
             case R.id.muslukrec :
                 setFirstver();
-                Animation fade7 = AnimationUtils.loadAnimation(waterPop.this,R.anim.fadein);
+                Animation fade7 = AnimationUtils.loadAnimation(AddWaterPopScreen.this,R.anim.fadein);
                 musluk.setImageResource(R.drawable.muslukafter);
                 musluk.startAnimation(fade7);
                 binustu.setTextColor(Color.WHITE);

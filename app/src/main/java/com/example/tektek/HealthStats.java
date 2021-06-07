@@ -11,10 +11,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class healthdegerler extends AppCompatActivity {
+public class HealthStats extends AppCompatActivity {
 
     public void turnMainScreen(){
-        Intent intent = new Intent(this, mainPage.class);
+        Intent intent = new Intent(this, MainPage.class);
         startActivity(intent);
     }
 
@@ -49,9 +49,9 @@ public class healthdegerler extends AppCompatActivity {
         TextView d5 = findViewById(R.id.deger5);
         TextView d6 = findViewById(R.id.deger6);
         TextView d7 = findViewById(R.id.deger7);
-        Animation animation1 = AnimationUtils.loadAnimation(healthdegerler.this,R.anim.fadein);
-        Animation animation2 = AnimationUtils.loadAnimation(healthdegerler.this,R.anim.lefttoright);
-        Animation animation3 = AnimationUtils.loadAnimation(healthdegerler.this,R.anim.bounce);
+        Animation animation1 = AnimationUtils.loadAnimation(HealthStats.this,R.anim.fadein);
+        Animation animation2 = AnimationUtils.loadAnimation(HealthStats.this,R.anim.lefttoright);
+        Animation animation3 = AnimationUtils.loadAnimation(HealthStats.this,R.anim.bounce);
         ana.startAnimation(animation1);
         degerarka.startAnimation(animation1);
         baslikres.startAnimation(animation1);

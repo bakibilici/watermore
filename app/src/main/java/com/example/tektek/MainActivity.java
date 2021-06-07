@@ -1,8 +1,6 @@
 package com.example.tektek;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +11,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -25,7 +22,7 @@ import static java.lang.String.valueOf;
 public class MainActivity extends AppCompatActivity {
 
     public void goMainScreen(){
-        Intent intent = new Intent(this, mainPage.class);
+        Intent intent = new Intent(this, MainPage.class);
         startActivity(intent);
     }
 

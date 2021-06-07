@@ -5,11 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
-public class mainPage extends AppCompatActivity {
+public class MainPage extends AppCompatActivity {
     //boy-kilo girmeye geri gönderiyo
     public void goUpdateValues(){
         Intent intent = new Intent(this, MainActivity.class);
@@ -17,15 +15,15 @@ public class mainPage extends AppCompatActivity {
     }
     //su eklemeye gönderiyo
     public void addWaterScreen(){
-        Intent intent = new Intent(this, waterPop.class);
+        Intent intent = new Intent(this, AddWaterPopScreen.class);
         startActivity(intent);
     }
     public void showHealthScreen(){
-        Intent intent = new Intent(this, healthdegerler.class);
+        Intent intent = new Intent(this, HealthStats.class);
         startActivity(intent);
     }
     public void setReminderScreen(){
-        Intent intent = new Intent(this, reminderScreen.class);
+        Intent intent = new Intent(this, ReminderScreen.class);
         startActivity(intent);
     }
     @Override
