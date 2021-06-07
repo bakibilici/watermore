@@ -8,6 +8,7 @@ import androidx.room.Update;
 
 import org.threeten.bp.OffsetDateTime;
 
+import java.util.HashMap;
 import java.util.List;
 
 @androidx.room.Dao
@@ -21,13 +22,16 @@ public interface Dao {
 
     @Query("SELECT * FROM UserTable ORDER BY date DESC LIMIT 1")
     LiveData<UserTable> getLastRecord();
-//SELECT * FROM UserTable WHERE date=(SELECT MAX(date) FROM UserTable)
+
 
     @Query("SELECT * FROM UserTable ORDER BY date DESC LIMIT 8") //for graphics
     LiveData<List<UserTable>> getLastSevenRecord();
 
     @Query("SELECT date FROM UserTable ORDER BY date DESC LIMIT 8") //for graphics
     LiveData<List<String>> getLastSevenRecordDate();
+
+   // @Query("SELECT date,* FROM UserTable ORDER BY date DESC LIMIT 8") //for graphics
+   // LiveData<HashMap<String,UserTable>> getLastSevenRecordandDate();//HASHMAP DENEME
 
     @Query("UPDATE UserTable SET drunk = :drunk + drunk WHERE recordId=(SELECT Max(recordId) FROM UserTable)")
     void update(int drunk);

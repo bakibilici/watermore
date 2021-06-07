@@ -9,6 +9,7 @@ import com.example.tektek.utils.TiviTypeConverters;
 
 import org.threeten.bp.OffsetDateTime;
 
+
 @Entity
 public class UserTable {
    @PrimaryKey(autoGenerate = true)
@@ -58,9 +59,10 @@ public class UserTable {
     public int proteinmaxreq;
 
 
+
     @TypeConverters(TiviTypeConverters.class)
     @ColumnInfo(name = "date")
-    OffsetDateTime date;
+    public OffsetDateTime date;
 
 
 

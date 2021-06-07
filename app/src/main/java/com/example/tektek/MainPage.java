@@ -40,10 +40,9 @@ public class MainPage extends AppCompatActivity {
     }
     public void goGraphicScreen(){
         Intent intent=new Intent(this,GraphicActivity.class);
-        //Bundle bundle=new Bundle();
-        //intent.putExtra("date", (Parcelable) dates);
-        intent.putStringArrayListExtra("dates", dates);
-        intent.putIntegerArrayListExtra("weight",weights);
+        //if we cant make graphic activity work with viewmodel observe
+        // intent.putStringArrayListExtra("dates", dates);
+        //intent.putIntegerArrayListExtra("weight",weights);
         startActivity(intent);
     }
     public void setReminderScreen(){
@@ -102,14 +101,16 @@ public class MainPage extends AppCompatActivity {
           }
 
         });
-        dbViewModel.getLastSevenRecords().observe(this,response->{
+
+        //if we cant make graphic activity work with viewmodel observe
+        /*dbViewModel.getLastSevenRecords().observe(this,response->{
             for (int i=0;i<response.size();i++){
                 weights.add(response.get(i).weight);
             }
         });
         dbViewModel.getLastSevenRecordsDate().observe(this,response->{
             dates=(ArrayList<String>) response;
-        });
+        });*/
 
 
         graphicshowbutton.setOnClickListener(view->{
